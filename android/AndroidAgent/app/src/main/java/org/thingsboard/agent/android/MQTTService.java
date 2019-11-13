@@ -147,6 +147,7 @@ public class MQTTService extends Service {
                         ConnectMqttOptions connectOptions = new ConnectMqttOptions();
                         connectOptions.setUrl(DEFAULT_MQTT_SERVER_IP);
                         connectOptions.setClientId(clientId);
+                        connectOptions.setUserName("XL5Uk0z68mtEetht6Dft");
                         connectOptions.setSubscribeTopic("toDevice/" + clientId);
                         connectOptions.setPublishTopic("toCloud/" + clientId);
 

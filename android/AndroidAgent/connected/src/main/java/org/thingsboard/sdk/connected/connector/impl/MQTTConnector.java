@@ -114,7 +114,7 @@ public class MQTTConnector implements Connector {
         conOpt.setCleanSession(connectOptions.isCleanSession());
         conOpt.setConnectionTimeout(connectOptions.getConnectionTimeout());
         conOpt.setKeepAliveInterval(connectOptions.getKeepAliveInterval());
-        conOpt.setUserName("XL5Uk0z68mtEetht6Dft");
+        conOpt.setUserName(connectOptions.getUserName());
 
         iMqttActionListener = new IMqttActionListener() {
             @Override

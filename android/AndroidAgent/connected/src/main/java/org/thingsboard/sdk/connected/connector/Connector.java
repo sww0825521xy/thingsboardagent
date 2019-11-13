@@ -1,11 +1,11 @@
-package com.honeywell.sdk.connected.connector;
+package org.thingsboard.sdk.connected.connector;
 
 import android.content.Context;
 
-import com.honeywell.sdk.connected.callback.ConnectStatusCallback;
-import com.honeywell.sdk.connected.callback.MessageCallback;
-import com.honeywell.sdk.connected.callback.MessageStatusCallback;
-import com.honeywell.sdk.connected.entity.ConnectOptions;
+import org.thingsboard.sdk.connected.callback.ConnectStatusCallback;
+import org.thingsboard.sdk.connected.callback.MessageCallback;
+import org.thingsboard.sdk.connected.callback.MessageStatusCallback;
+import org.thingsboard.sdk.connected.entity.ConnectOptions;
 
 
 /**

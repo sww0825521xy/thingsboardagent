@@ -1,4 +1,4 @@
-package com.honeywell.sdk.connected.entity;
+package org.thingsboard.sdk.connected.entity;
 
 /**
  * Created by h179730 on 12/17/2018.

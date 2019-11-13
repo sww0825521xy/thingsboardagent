@@ -1,12 +1,12 @@
-package com.honeywell.sdk.connected;
+package org.thingsboard.sdk.connected;
 
 import android.util.Log;
 
-import com.honeywell.sdk.connected.connector.Connector;
-import com.honeywell.sdk.connected.connector.impl.MQTTConnector;
-import com.honeywell.sdk.connected.connector.impl.SentienceConnector;
-import com.honeywell.sdk.connected.connector.impl.WebsocketConnector;
-import com.honeywell.sdk.connected.entity.ConnectType;
+import org.thingsboard.sdk.connected.connector.Connector;
+import org.thingsboard.sdk.connected.connector.impl.MQTTConnector;
+import org.thingsboard.sdk.connected.connector.impl.SentienceConnector;
+import org.thingsboard.sdk.connected.connector.impl.WebsocketConnector;
+import org.thingsboard.sdk.connected.entity.ConnectType;
 
 
 /**

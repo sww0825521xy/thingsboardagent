@@ -9,13 +9,13 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.honeywell.sdk.connected.ConnectManager;
-import com.honeywell.sdk.connected.callback.ConnectStatusCallback;
-import com.honeywell.sdk.connected.callback.MessageCallback;
-import com.honeywell.sdk.connected.callback.MessageStatusCallback;
-import com.honeywell.sdk.connected.connector.Connector;
-import com.honeywell.sdk.connected.entity.ConnectMqttOptions;
-import com.honeywell.sdk.connected.entity.ConnectType;
+import org.thingsboard.sdk.connected.ConnectManager;
+import org.thingsboard.sdk.connected.callback.ConnectStatusCallback;
+import org.thingsboard.sdk.connected.callback.MessageCallback;
+import org.thingsboard.sdk.connected.callback.MessageStatusCallback;
+import org.thingsboard.sdk.connected.connector.Connector;
+import org.thingsboard.sdk.connected.entity.ConnectMqttOptions;
+import org.thingsboard.sdk.connected.entity.ConnectType;
 import com.orhanobut.logger.Logger;
 
 public class MQTTService extends Service {

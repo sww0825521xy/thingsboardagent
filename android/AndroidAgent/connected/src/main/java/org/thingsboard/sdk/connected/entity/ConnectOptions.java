@@ -1,4 +1,4 @@
-package com.honeywell.sdk.connected.entity;
+package org.thingsboard.sdk.connected.entity;
 
 import javax.net.SocketFactory;
 

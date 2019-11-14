@@ -24,6 +24,8 @@ public class MQTTService extends Service {
 
     public static String DEFAULT_MQTT_SERVER_IP = "tcp://106.12.186.57:1883";
 
+    public static String ACCESS_TOKEN = "XL5Uk0z68mtEetht6Dft";
+
     private static Connector connector;
 
     private static MessageStatusCallback messageStatusCallback;
@@ -83,7 +85,7 @@ public class MQTTService extends Service {
             if(intent.ACTION_TIME_TICK.equals(action)){
                 Log.i(TAG, "onReceive action=" + action);
                 //TODO
-                boolean enrollFlag = false;
+                boolean enrollFlag = true;
                 if (enrollFlag) {
                     connectServer();
                 }
@@ -147,7 +149,7 @@ public class MQTTService extends Service {
                         ConnectMqttOptions connectOptions = new ConnectMqttOptions();
                         connectOptions.setUrl(DEFAULT_MQTT_SERVER_IP);
                         connectOptions.setClientId(clientId);
-                        connectOptions.setUserName("XL5Uk0z68mtEetht6Dft");
+                        connectOptions.setUserName(ACCESS_TOKEN);
                         connectOptions.setSubscribeTopic("toDevice/" + clientId);
                         connectOptions.setPublishTopic("toCloud/" + clientId);
 

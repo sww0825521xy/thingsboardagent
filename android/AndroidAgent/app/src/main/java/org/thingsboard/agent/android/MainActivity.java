@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         intent.setAction(Const.ACTION_CONNECT_SERVER);
         startService(intent);
 
+        //TODO
+
     }
 
     @Override

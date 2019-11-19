@@ -60,6 +60,8 @@ public class Test {
 					public void onSuccess() {
 						System.out.println("ConnectStatusCallback onSuccess");
 //                        enrollDevice();
+						//publish message
+						publish("{\"device\":\"Device B\"}");
 					}
 
 					@Override
@@ -82,8 +84,8 @@ public class Test {
 				connectOptions.setUrl(DEFAULT_MQTT_SERVER_IP);
 				connectOptions.setClientId(clientId);
 				connectOptions.setUserName(ACCESS_TOKEN);
-				connectOptions.setSubscribeTopic("toDevice/" + clientId);
-				connectOptions.setPublishTopic("toCloud/" + clientId);
+				connectOptions.setSubscribeTopic("v1/gateway/rpc");
+				connectOptions.setPublishTopic("v1/gateway/connect");
 
 				connectOptions.setCleanSession(true);
 				connectOptions.setConnectionTimeout(100);
@@ -107,5 +109,29 @@ public class Test {
 			connector = null;
 		}
 	}
+	
+	public static boolean publish(String msg) {
+        try {
+            if (connector != null) {
+            	System.out.println("publish:" + msg + " connector status:" + connector.isConnected());
+            	System.out.println("publish:" + msg + " connector status:" + connector.isConnected());
+                messageStatusCallback = new MessageStatusCallback() {
+                    @Override
+                    public void deliveryComplete() {
+                    	System.out.println("deliveryComplete");
+                    }
+                };
+                connector.send(msg, messageStatusCallback, false);
+                return true;
+            } else {
+            	System.out.println("publish:" + msg + " connector is null");
+            	System.out.println("publish:" + msg + " connector is null");
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
 }
